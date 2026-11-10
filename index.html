@@ -51,8 +51,8 @@ body{
 ::selection{background:var(--accent);color:var(--on-accent)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;z-index:200;text-decoration:none}
-.skip:focus{top:12px}
+a.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;z-index:200;text-decoration:none}
+a.skip:focus{top:12px}
 .wrap{max-width:1560px;margin:0 auto;padding:0 clamp(20px,4vw,64px)}
 
 /* header */
@@ -511,7 +511,8 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
 .js .hlogo:not(.on){visibility:hidden}
 
 .contact-grid>*{min-width:0}
-@media(min-width:901px){.viz{max-width:780px;width:100%;justify-self:end}}
+@media(min-width:901px){.viz{max-width:780px;width:100%;justify-self:end;align-self:start}}
+@media(max-width:560px){#shelfOut{flex-basis:100%}}
 .links li{grid-template-columns:minmax(84px,130px) minmax(0,1fr)}
 .links a,.links b{overflow-wrap:anywhere}
 @media(max-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
@@ -1321,6 +1322,15 @@ const gc=(()=>{
   return {start(){if(!raf)raf=requestAnimationFrame(draw)},stop(){cancelAnimationFrame(raf);raf=0}};
 })();
 
+/* a demo card keeps one height while text types in: each text slot reserves room for its longest text */
+function reserve(slots){
+  slots.forEach(([el,texts])=>{
+    const keep=el.textContent;el.style.minHeight='0';let mh=0;
+    for(const t of texts){el.textContent=t;mh=Math.max(mh,el.offsetHeight)}
+    el.textContent=keep;el.style.minHeight=mh+'px';
+  });
+}
+
 /* ---------- project 2: RAG (cycles through questions) ---------- */
 const rag=(()=>{
   const SC=[
@@ -1347,7 +1357,9 @@ const rag=(()=>{
     if(isOpen)loopT=setTimeout(play,7000);
   }
   $('#ragReplay').addEventListener('click',play);
-  return {start(){isOpen=true;play()},stop(){isOpen=false;tok++;clearTimeout(loopT)}};
+  const fit=()=>reserve([[qEl,SC.map(s=>s.q)],[aEl,SC.map(s=>s.a)]]);
+  addEventListener('resize',()=>{if(isOpen)fit()});
+  return {start(){isOpen=true;fit();play()},stop(){isOpen=false;tok++;clearTimeout(loopT)}};
 })();
 
 /* ---------- project 3: interview bot (cycles domains) ---------- */
@@ -1385,7 +1397,9 @@ const iv=(()=>{
     nEl.textContent=d.n;sched();
   }
   btns.forEach(b=>b.addEventListener('click',()=>{lastUser=Date.now();play(b.dataset.d)}));
-  return {start(){isOpen=true;play(cur)},stop(){isOpen=false;tok++;clearTimeout(loopT)}};
+  const fit=()=>reserve([[qEl,order.map(k=>D[k].q)],[aEl,order.map(k=>D[k].a)],[nEl,order.map(k=>D[k].n)]]);
+  addEventListener('resize',()=>{if(isOpen)fit()});
+  return {start(){isOpen=true;fit();play(cur)},stop(){isOpen=false;tok++;clearTimeout(loopT)}};
 })();
 
 /* ---------- project 4: shelf (restocks and sells out on its own) ---------- */
