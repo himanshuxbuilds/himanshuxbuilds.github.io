@@ -402,6 +402,72 @@ header.scrolled{background:color-mix(in srgb,var(--bg) 92%,transparent);box-shad
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.ticker-in,.chip,.logo circle,.avail i,.live i,.caret,.prog+.job::before{animation:none!important}.spot{display:none}}
 
+/* ===== edge-to-edge layout ===== */
+.wrap{max-width:2200px;padding:0 clamp(20px,3.6vw,72px)}
+header .hbar{padding-left:clamp(20px,3.6vw,72px);padding-right:clamp(20px,3.6vw,72px)}
+.quick .wrap{padding-left:max(4px,calc(clamp(20px,3.6vw,72px) - 16px));padding-right:clamp(20px,3.6vw,72px)}
+h1{font-size:clamp(42px,5.9vw,128px)}
+.sub{font-size:clamp(18px,1.6vw,27px)}
+.lead{max-width:56ch}
+.about-copy{max-width:62ch}
+.proc-panel p{max-width:60ch}
+.links{max-width:none}
+.job ul{max-width:none;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:12px 44px}
+.certs ul{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+@media(min-width:1100px){.head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:end}.head .lead{margin-top:0;justify-self:end}}
+
+/* ===== more colour ===== */
+#about{--sc:var(--c4)}#work{--sc:var(--c1)}#process{--sc:var(--c3)}#experience{--sc:var(--c5)}#toolkit{--sc:var(--c6)}#education{--sc:var(--c2)}#contact{--sc:var(--c4)}
+#work,#experience,#education,#contact{background:color-mix(in srgb,var(--sc) 7%,transparent)}
+#work{padding-top:clamp(80px,11vw,150px)!important}
+.sec h2::after{content:'';display:block;width:clamp(72px,7vw,128px);height:8px;border-radius:4px;background:var(--sc,var(--accent));margin-top:22px}
+.hl{color:inherit;background:linear-gradient(color-mix(in srgb,var(--hc) 60%,transparent),color-mix(in srgb,var(--hc) 60%,transparent)) 0 86%/100% .34em no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hl.a{--hc:var(--c2)}.hl.b{--hc:var(--c3)}
+#hero{overflow:hidden}
+#hero::before,#hero::after{content:'';position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+#hero::before{width:56vw;height:56vw;right:-14vw;top:-18vw;background:radial-gradient(circle,color-mix(in srgb,var(--c2) 30%,transparent),transparent 64%);animation:blobA 16s ease-in-out infinite alternate}
+#hero::after{width:48vw;height:48vw;left:-16vw;bottom:-22vw;background:radial-gradient(circle,color-mix(in srgb,var(--c4) 24%,transparent),transparent 64%);animation:blobB 19s ease-in-out infinite alternate}
+@keyframes blobA{to{transform:translate(-6vw,5vw) scale(1.08)}}
+@keyframes blobB{to{transform:translate(7vw,-4vw) scale(1.1)}}
+.hero-grid{position:relative;z-index:1}
+.scroll{z-index:1}
+.quick{background:linear-gradient(90deg,var(--c1),var(--c5))}
+.ticker{background:var(--ink);color:var(--bg)}
+.sprog{background:linear-gradient(90deg,var(--c2),var(--c6),var(--c4))}
+.spot{background:radial-gradient(circle,color-mix(in srgb,var(--live,var(--accent)) 16%,transparent),transparent 66%)}
+.dots a.on::before{background:var(--live,var(--accent));border-color:var(--live,var(--accent))}
+header nav a.on{background-image:linear-gradient(var(--live,currentColor),var(--live,currentColor));background-size:100% 3px}
+#p0{--pc:var(--c1)}#p1{--pc:var(--c3)}#p2{--pc:var(--c5)}#p3{--pc:var(--c6)}
+.proj-head:hover .ttl,.open .ttl{color:var(--pc,var(--accent))}
+.pad li::before{background:var(--pc,var(--accent))}
+.proj .viz{border-top:5px solid var(--pc,var(--accent))}
+.proj .tags span{border:2px solid color-mix(in srgb,var(--pc,var(--accent)) 55%,transparent)}
+#pt0,#pp0{--pc:var(--c1)}#pt1,#pp1{--pc:var(--c5)}#pt2,#pp2{--pc:var(--c3)}#pt3,#pp3{--pc:var(--c4)}
+.proc-list button[aria-selected="true"]{background:color-mix(in srgb,var(--pc) 18%,var(--surface));color:var(--ink);box-shadow:inset 6px 0 0 var(--pc)}
+.proc-list button[aria-selected="true"] .n{background:var(--pc);border-color:var(--pc);color:var(--on-accent)}
+.proc-list button .n{border-color:var(--pc);color:var(--pc)}
+.proc-panel li::before{background:var(--pc,var(--sc))}
+.proc-panel h3::after{content:'';display:block;width:64px;height:6px;border-radius:3px;background:var(--pc);margin-top:14px}
+.proc-bar i{background:linear-gradient(90deg,var(--c1),var(--c5),var(--c3),var(--c4));background-size:400% 100%}
+.job:nth-of-type(2){--jc:var(--c5)}.job:nth-of-type(3){--jc:var(--c6)}.job:nth-of-type(4){--jc:var(--c4)}
+.job::before{border-color:var(--jc,var(--accent))}
+.job li::before{background:var(--jc,var(--accent))}
+.job .co{color:var(--jc,var(--mute));font-weight:600}
+.tl .prog{background:linear-gradient(var(--c5),var(--c6),var(--c4))}
+.erow:hover{background:color-mix(in srgb,var(--sc) 18%,transparent)}
+.certs li{border-top:5px solid var(--cc,var(--accent))}
+.certs li:nth-child(1){--cc:var(--c1)}.certs li:nth-child(2){--cc:var(--c3)}.certs li:nth-child(3){--cc:var(--c5)}.certs li:nth-child(4){--cc:var(--c6)}
+.mail{background-image:linear-gradient(90deg,var(--c1),var(--c5),var(--c4))}
+.cform{border-top:5px solid var(--c4)}
+footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c5),var(--c4),var(--c6),var(--c2),var(--c3)) 1}
+.contact-grid>*{min-width:0}
+@media(min-width:901px){.viz{max-width:780px;width:100%;justify-self:end}}
+.links li{grid-template-columns:minmax(84px,130px) minmax(0,1fr)}
+.links a,.links b{overflow-wrap:anywhere}
+@media(max-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){.mail{overflow-wrap:anywhere;word-break:normal}}
+@media(prefers-reduced-motion:reduce){#hero::before,#hero::after{animation:none!important}}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -449,7 +515,7 @@ header.scrolled{background:color-mix(in srgb,var(--bg) 92%,transparent);box-shad
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="avail"><i></i>Open to Data Science and AI-Native Developer opportunities</p>
-      <h1>I turn messy data into systems people can trust.</h1>
+      <h1>I turn <mark class="hl a">messy data</mark> into systems people can <mark class="hl b">trust.</mark></h1>
       <p class="sub">I’m Himanshu Pradhan. I build machine-learning and LLM systems, then explain them to people who never asked for the maths.</p>
       <p class="typed">Right now I’m into <b id="typed"></b><span class="caret" aria-hidden="true"></span></p>
       <div class="cta">
@@ -1238,7 +1304,7 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   function layout(){
     const w=box.clientWidth;if(!w)return;
     if(mode==='cluster'){
-      const cols=w>860?3:w>540?2:1,gap=28,gw=(w-gap*(cols-1))/cols,colsY=Array(cols).fill(0);let n=0;
+      const cols=w>1700?6:w>1250?4:w>860?3:w>540?2:1,gap=28,gw=(w-gap*(cols-1))/cols,colsY=Array(cols).fill(0);let n=0;
       G.forEach((g,gi)=>{
         const ci=colsY.indexOf(Math.min(...colsY)),x0=ci*(gw+gap);let y=colsY[ci];
         const h=heads[gi];h.style.width=gw+'px';put(h,x0,y,1,0,n++);y+=h.offsetHeight+14;
@@ -1397,7 +1463,7 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   const ids=['hero','about','work','process','experience','toolkit','education','contact'];
   const dots=$$('.dots a'),navs=$$('#nav a');
   const io=new IntersectionObserver(es=>es.forEach(e=>{
-    if(!e.isIntersecting)return;const id=e.target.id;
+    if(!e.isIntersecting)return;const id=e.target.id;root.style.setProperty('--live',({hero:'var(--c1)',about:'var(--c4)',work:'var(--c1)',process:'var(--c3)',experience:'var(--c5)',toolkit:'var(--c6)',education:'var(--c2)',contact:'var(--c4)'})[id]||'var(--accent)');
     dots.forEach(a=>a.classList.toggle('on',a.dataset.s===id));
     navs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
   }),{rootMargin:'-45% 0px -50% 0px'});
