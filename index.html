@@ -3,18 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Himanshu Pradhan | Machine learning and LLM systems</title>
-<meta name="description" content="Himanshu Pradhan builds machine-learning, computer-vision and LLM systems, and explains them in plain language. Portfolio, projects and contact.">
-<meta property="og:title" content="Himanshu Pradhan | Machine learning and LLM systems">
-<meta property="og:description" content="Deep learning, agentic RAG and computer vision projects, built end to end.">
+<title>Himanshu Pradhan | AI, Data Science and Software Engineering</title>
+<meta name="description" content="Portfolio of Himanshu Pradhan, a Computer Science graduate studying AI &amp; Data Science: machine-learning, computer-vision and LLM projects, Python backend code and internship experience.">
+<meta name="author" content="Himanshu Pradhan">
+<link rel="canonical" href="https://himanshuxbuilds.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Himanshu Pradhan">
+<meta property="og:url" content="https://himanshuxbuilds.github.io/">
+<meta property="og:title" content="Himanshu Pradhan | AI, Data Science and Software Engineering">
+<meta property="og:description" content="Machine-learning, computer-vision and LLM projects, Python backend code and internship experience.">
+<meta property="og:image" content="https://himanshuxbuilds.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Himanshu Pradhan","url":"https://himanshuxbuilds.github.io/","email":"mailto:pradhanhimanshu86929@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Ahmedabad","addressCountry":"IN"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Kalinga Institute of Industrial Technology"},"sameAs":["https://github.com/himanshuxbuilds","https://linkedin.com/in/himanshupradhan86929"]}</script>
 <meta name="theme-color" content="#EDF0F7">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23ffffff'/%3E%3Crect x='7' y='6' width='7.5' height='28' rx='3.75' fill='%233347F0'/%3E%3Crect x='11' y='16.5' width='18' height='7.5' rx='3.75' fill='%23E5457D'/%3E%3Crect x='25.5' y='6' width='7.5' height='16' rx='3.75' fill='%23F2A900'/%3E%3Crect x='25.5' y='18' width='7.5' height='16' rx='3.75' fill='%230FA37F'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
-document.documentElement.classList.add('js');document.documentElement.setAttribute('data-theme','light');try{localStorage.removeItem('hp-theme')}catch(e){}
+document.documentElement.classList.add('js');(function(){var t='light';try{localStorage.removeItem('hp-theme');if(sessionStorage.getItem('hp-theme')==='dark')t='dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)})();
 </script>
 <style>
 :root{
@@ -85,7 +94,7 @@ h2{font:600 clamp(38px,5.6vw,78px)/.98 var(--display);letter-spacing:-.035em;max
 
 /* projects */
 .proj{border-top:2px solid var(--ink)}
-.proj:last-child{border-bottom:2px solid var(--ink)}
+.proj:last-of-type{border-bottom:2px solid var(--ink)}
 .proj h3{font:inherit}
 .proj-head{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:1fr auto 36px;align-items:center;gap:20px;width:100%;padding:30px 0}
 .proj-head:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
@@ -173,13 +182,6 @@ h2{font:600 clamp(38px,5.6vw,78px)/.98 var(--display);letter-spacing:-.035em;max
 @media(max-width:760px){.job{grid-template-columns:1fr}}
 
 /* toolkit */
-.tools-top{display:flex;gap:24px 40px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
-.seg{display:flex;gap:8px}
-.sbox{position:relative;margin-top:44px;transition:height .7s cubic-bezier(.2,.9,.2,1)}
-.chip,.ghead{position:absolute;left:0;top:0;transition:transform .95s cubic-bezier(.2,.9,.2,1),opacity .5s;will-change:transform}
-.chip{padding:8px 15px;border-radius:999px;border:2px solid var(--c);background:color-mix(in srgb,var(--c) 13%,var(--bg));font-weight:500;font-size:15px;line-height:1.3;white-space:nowrap}
-.chip.dim{opacity:.22!important}
-.ghead{font:700 17px var(--display);color:var(--c);padding-bottom:9px;border-bottom:3px solid var(--c);letter-spacing:-.01em}
 
 /* education */
 .edu{display:grid}
@@ -265,6 +267,14 @@ h1{font:700 clamp(42px,5.6vw,84px)/.95 var(--display);letter-spacing:-.045em;mar
 .lab-out span{display:block}
 .lab-out b{font-weight:700}
 .lab-row{display:flex;gap:8px;flex-wrap:wrap}
+.lab-empty{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:6px;padding:24px;text-align:center;pointer-events:none}
+.lab-empty[hidden]{display:none}
+.lab-empty::before{content:'+';display:grid;place-items:center;width:46px;height:46px;margin-bottom:6px;border-radius:50%;border:2px dashed color-mix(in srgb,var(--ink) 40%,transparent);font:500 26px/1 var(--body);color:var(--mute)}
+.lab-empty b{font:600 clamp(18px,1.6vw,24px) var(--display);letter-spacing:-.01em}
+.lab-empty span{font-size:15px;color:var(--mute);max-width:30ch}
+.lab.empty .live{display:none}
+.btn:disabled{opacity:.4;cursor:default}
+.btn:disabled:hover{background:none;color:inherit}
 .lab figcaption{font-size:14px;color:var(--mute);margin-top:12px;line-height:1.4}
 
 /* ===== process ===== */
@@ -356,9 +366,8 @@ dialog.menu{position:fixed;inset:0;width:100%;height:100%;margin:0}
 .dots a:hover span,.dots a:focus-visible span{opacity:1;transform:none}
 .dots a.on::before{background:var(--accent);border-color:var(--accent);transform:scale(1.35)}
 .corner{position:fixed;bottom:16px;z-index:40;font:600 13px var(--body);color:var(--mute);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(8px);padding:6px 12px;border-radius:999px;pointer-events:none;display:none}
-.corner.l{left:16px}.corner.r{right:16px}
+.corner.l{left:16px}
 @media(min-width:980px){.corner{display:block}}
-@media(pointer:coarse){.corner.r{display:none}}
 .ring{position:fixed;left:0;top:0;z-index:300;pointer-events:none;opacity:0;transition:opacity .3s}
 .ring i{display:block;width:28px;height:28px;border:2px solid var(--accent);border-radius:50%;transition:transform .2s,background .2s}
 .ring.big i{transform:scale(1.8);background:color-mix(in srgb,var(--accent) 16%,transparent)}
@@ -378,10 +387,6 @@ header.scrolled{background:color-mix(in srgb,var(--bg) 92%,transparent);box-shad
 /* ===== live layer ===== */
 .spot{position:fixed;left:0;top:0;width:920px;height:920px;margin:-460px 0 0 -460px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 13%,transparent),transparent 66%);pointer-events:none;z-index:-1;will-change:transform}
 .sprog{position:fixed;top:108px;left:0;right:0;height:3px;background:var(--c2);transform-origin:0 50%;transform:scaleX(0);z-index:58;pointer-events:none}
-.logo circle{transform-box:fill-box;animation:lfloat 3.6s ease-in-out infinite alternate}
-.logo circle:nth-child(2){animation-delay:-1.2s}
-.logo circle:nth-child(3){animation-delay:-2.4s}
-@keyframes lfloat{from{translate:0 -1.5px}to{translate:0 2px}}
 .ticker{overflow:hidden;padding:16px 0;background:var(--surface)}
 .ticker-in{display:flex;gap:44px;width:max-content;animation:tick 70s linear infinite}
 .ticker:hover .ticker-in{animation-play-state:paused}
@@ -393,9 +398,6 @@ header.scrolled{background:color-mix(in srgb,var(--bg) 92%,transparent);box-shad
 .live i{width:8px;height:8px;border-radius:50%;background:var(--c4);animation:ping4 1.8s infinite}
 @keyframes ping4{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--c4) 60%,transparent)}70%,100%{box-shadow:0 0 0 8px transparent}}
 .lab.paused .live i{animation:none;background:var(--mute)}
-.chip{animation:bob var(--bdur,5s) ease-in-out var(--bd,0s) infinite alternate}
-.sbox.scat .chip{--amp:7px}
-@keyframes bob{from{translate:0 calc(var(--amp,3px)*-1)}to{translate:0 var(--amp,3px)}}
 .prog+.job::before{animation:ping2 2.4s infinite}
 @keyframes ping2{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent)}70%,100%{box-shadow:0 0 0 12px transparent}}
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.8,.2,1) var(--d,0s),transform .8s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
@@ -425,8 +427,8 @@ h1{font-size:clamp(42px,5.9vw,128px)}
 .hl.a{--hc:var(--c2)}.hl.b{--hc:var(--c3)}
 #hero{overflow:hidden}
 #hero::before,#hero::after{content:'';position:absolute;border-radius:50%;pointer-events:none;z-index:0}
-#hero::before{width:56vw;height:56vw;right:-14vw;top:-18vw;background:radial-gradient(circle,color-mix(in srgb,var(--c2) 30%,transparent),transparent 64%);animation:blobA 16s ease-in-out infinite alternate}
-#hero::after{width:48vw;height:48vw;left:-16vw;bottom:-22vw;background:radial-gradient(circle,color-mix(in srgb,var(--c4) 24%,transparent),transparent 64%);animation:blobB 19s ease-in-out infinite alternate}
+#hero::before{width:56vw;height:56vw;right:-14vw;top:-18vw;background:radial-gradient(circle,color-mix(in srgb,var(--c2) 16%,transparent),transparent 64%);animation:blobA 16s ease-in-out infinite alternate}
+#hero::after{width:48vw;height:48vw;left:-16vw;bottom:-22vw;background:radial-gradient(circle,color-mix(in srgb,var(--c4) 12%,transparent),transparent 64%);animation:blobB 19s ease-in-out infinite alternate}
 @keyframes blobA{to{transform:translate(-6vw,5vw) scale(1.08)}}
 @keyframes blobB{to{transform:translate(7vw,-4vw) scale(1.1)}}
 .hero-grid{position:relative;z-index:1}
@@ -434,7 +436,7 @@ h1{font-size:clamp(42px,5.9vw,128px)}
 .quick{background:linear-gradient(90deg,var(--c1),var(--c5))}
 .ticker{background:var(--ink);color:var(--bg)}
 .sprog{background:linear-gradient(90deg,var(--c2),var(--c6),var(--c4))}
-.spot{background:radial-gradient(circle,color-mix(in srgb,var(--live,var(--accent)) 16%,transparent),transparent 66%)}
+.spot{background:radial-gradient(circle,color-mix(in srgb,var(--live,var(--accent)) 9%,transparent),transparent 66%)}
 .dots a.on::before{background:var(--live,var(--accent));border-color:var(--live,var(--accent))}
 header nav a.on{background-image:linear-gradient(var(--live,currentColor),var(--live,currentColor));background-size:100% 3px}
 #p0{--pc:var(--c1)}#p1{--pc:var(--c3)}#p2{--pc:var(--c5)}#p3{--pc:var(--c6)}
@@ -516,6 +518,58 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
 @media(max-width:520px){.mail{overflow-wrap:anywhere;word-break:normal}}
 @media(prefers-reduced-motion:reduce){#hero::before,#hero::after{animation:none!important}}
 
+/* ===== upgrade pass: calmer backgrounds, project structure, repo list, form states ===== */
+.spot{animation:spotdrift 24s ease-in-out infinite alternate}
+@keyframes spotdrift{from{translate:-7vw -4vh}to{translate:8vw 6vh}}
+#education{background:radial-gradient(34% 60% at 86% 82%,color-mix(in srgb,var(--c5) 11%,transparent),transparent 70%),color-mix(in srgb,var(--sc) 6%,transparent)}
+#contact{background:radial-gradient(36% 62% at 80% 56%,color-mix(in srgb,var(--c4) 12%,transparent),transparent 70%),color-mix(in srgb,var(--sc) 6%,transparent)}
+.job:nth-of-type(2){--jc:var(--c1)}.job:nth-of-type(3){--jc:var(--c5)}.job:nth-of-type(4){--jc:var(--c6)}.job:nth-of-type(5){--jc:var(--c4)}
+.pj{margin:0 0 4px;display:grid}
+.pj>div{display:grid;grid-template-columns:118px minmax(0,1fr);gap:6px 18px;padding:13px 0;border-top:1px solid var(--line)}
+.pj dt{font-weight:600;font-size:15px;color:var(--mute)}
+.pj dd{margin:0}
+.pj .tags{margin:0}
+@media(max-width:560px){.pj>div{grid-template-columns:1fr}}
+.demo-tag{display:inline-block;font:700 12.5px var(--body);letter-spacing:.02em;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--ink) 9%,transparent);margin-bottom:12px}
+.gh{margin-top:clamp(40px,5vw,72px)}
+.gh h3{font:600 clamp(24px,2.4vw,34px) var(--display);letter-spacing:-.02em}
+.gh>p{color:var(--mute);margin:6px 0 18px;max-width:60ch}
+.gh ul{list-style:none;padding:0;display:grid}
+.gh li{border-top:1px solid var(--line)}
+.gh li:last-child{border-bottom:1px solid var(--line)}
+.gh a{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr) auto;gap:6px 28px;align-items:baseline;padding:16px 4px;text-decoration:none;transition:background .2s,padding-left .25s}
+.gh a:hover{background:color-mix(in srgb,var(--accent) 7%,transparent);padding-left:14px}
+.gh b{font:600 19px var(--display);letter-spacing:-.01em}
+.gh a:hover b{text-decoration:underline;text-underline-offset:4px}
+.gh span{color:var(--mute);font-size:16px}
+.gh i{font-style:normal;font-weight:600;font-size:14px;color:var(--mute);white-space:nowrap}
+@media(max-width:820px){.gh a{grid-template-columns:1fr}}
+.tk-list{margin-top:14px;max-width:1100px}
+.tk-list summary{cursor:pointer;font-weight:600;width:max-content;padding:6px 0}
+.tk-list summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px 40px;padding:14px 0 6px}
+.tk-grid h3{font:700 16px var(--display);margin-bottom:8px}
+.tk-grid ul{list-style:none;padding:0;display:grid;gap:5px;font-size:15.5px}
+.tk-grid li span{color:var(--mute)}
+.fld{display:grid;gap:6px}
+.ferr{font-size:14px;font-weight:600;color:var(--c4)}
+.ferr:empty{display:none}
+.cform [aria-invalid="true"]{border-color:var(--c4)}
+
+/* ===== light theme: tiles that read as frosted glass, not white cards ===== */
+.lab{--gt1:var(--c2);--gt2:var(--c1)}
+.viz{--gt1:var(--pc,var(--c1));--gt2:var(--c5)}
+#p2 .viz{--gt2:var(--c1)}
+.cform{--gt1:var(--c4);--gt2:var(--c1)}
+.certs li{--gt1:var(--cc,var(--c1));--gt2:var(--cc,var(--c1))}
+.dlg{--gt1:var(--c5);--gt2:var(--c1)}
+[data-theme="light"]{--glass-b:rgba(255,255,255,.96);--glass-sh:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(20,26,51,.07),0 0 0 1px rgba(20,26,51,.06),0 38px 72px -38px rgba(51,71,240,.5),0 12px 26px -16px rgba(20,26,51,.24);--glass-sh2:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(20,26,51,.07),0 0 0 1px rgba(20,26,51,.07),0 48px 84px -38px rgba(51,71,240,.55),0 16px 30px -16px rgba(20,26,51,.28)}
+[data-theme="light"] .lab,[data-theme="light"] .viz,[data-theme="light"] .cform,[data-theme="light"] .certs li,[data-theme="light"] .dlg{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .1 0 0 0 0 .22 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(135deg,rgba(255,255,255,.84) 0%,rgba(255,255,255,.12) 44%,rgba(255,255,255,.38) 100%),radial-gradient(72% 62% at 100% 0%,color-mix(in srgb,var(--gt1) 26%,transparent),transparent 72%),radial-gradient(62% 66% at 0% 100%,color-mix(in srgb,var(--gt2) 20%,transparent),transparent 72%),rgba(222,229,250,.38);-webkit-backdrop-filter:blur(30px) saturate(200%);backdrop-filter:blur(30px) saturate(200%)}
+[data-theme="light"] .dlg{background-color:rgba(238,242,252,.86)}
+[data-theme="light"] .certs li{box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(20,26,51,.06),0 22px 40px -26px rgba(51,71,240,.42),0 6px 14px -10px rgba(20,26,51,.2)}
+[data-theme="light"] .certs li:hover{box-shadow:var(--glass-sh2)}
+[data-theme="light"] .avail{background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.42));box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(20,26,51,.06),0 10px 22px -14px rgba(20,26,51,.32)}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -549,7 +603,7 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
   </div>
 </header>
 <div class="sprog" id="sprog" aria-hidden="true"></div>
-<div class="quick" role="toolbar" aria-label="Quick actions">
+<div class="quick" role="navigation" aria-label="Quick actions">
   <div class="wrap">
     <button type="button" id="qRec">Quick profile</button>
     <button type="button" id="qTour">Take the tour</button>
@@ -564,7 +618,7 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
     <div class="hero-copy">
       <p class="avail"><i></i>Open to Data Science and AI-Native Developer opportunities</p>
       <h1>I turn <mark class="hl a">messy data</mark> into systems people can <mark class="hl b">trust.</mark></h1>
-      <p class="sub">I’m Himanshu Pradhan. I build machine-learning and LLM systems, then explain them to people who never asked for the maths.</p>
+      <p class="sub">I’m Himanshu Pradhan, a Computer Science graduate studying AI &amp; Data Science. I build machine-learning and LLM projects in Python, and I like the step where a business problem becomes working software.</p>
       <p class="typed">Right now I’m into <b id="typed"></b><span class="caret" aria-hidden="true"></span></p>
       <div class="cta">
         <a class="btn solid" href="#work">View my work</a>
@@ -584,10 +638,10 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
           <button type="button" data-k="15" aria-pressed="false">k = 15</button>
         </div>
       </div>
-      <div class="cvwrap"><canvas id="lab-cv" role="img" aria-label="Scatter plot of two classes of points with coloured decision regions from a k-nearest-neighbours classifier. Click to add points."></canvas><span class="live" id="labLive"><i></i><b>Live</b></span></div>
+      <div class="cvwrap"><canvas id="lab-cv" role="img" aria-label="Scatter plot of two classes of points with coloured decision regions from a k-nearest-neighbours classifier. Click to add points."></canvas><span class="live" id="labLive"><i></i><b>Live</b></span><div class="lab-empty" id="labEmpty" hidden><b>Tap or click anywhere to add a point</b><span>Choose Class A or Class B first, or press New data for a sample set.</span></div></div>
       <p class="lab-out"><span id="labCur">Hover over the plot to probe it.</span><span id="labAcc"></span></p>
       <div class="lab-row"><button type="button" class="btn sm" id="labNew">New data</button><button type="button" class="btn sm" id="labClear">Clear</button><button type="button" class="btn sm" id="labPause" aria-pressed="false">Pause motion</button></div>
-      <figcaption>A k-nearest-neighbours classifier you can break. Click to add points, use k = 1 to overfit it, then k = 15 to smooth it out.</figcaption>
+      <figcaption>A real k-nearest-neighbours classifier running in your browser on made-up points. Click to add points, use k = 1 to overfit it, then k = 15 to smooth it out.</figcaption>
     </figure>
   </div>
   <a class="scroll" href="#about" aria-label="Scroll to the next section"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
@@ -599,8 +653,8 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
   <div class="wrap about">
     <h2 id="about-h" class="pull" style="max-width:none">I like the unglamorous middle of machine learning: balancing messy data, evaluating honestly, and getting a model to explain itself.</h2>
     <div class="about-copy">
-      <p>I’m a Computer Science graduate (B.Tech, KIIT) now doing a PGDM in AI &amp; Data Science at Adani Institute of Digital Technology Management. My pneumonia classifier reaches <strong>93.7%</strong> accuracy on <strong>27,000</strong> chest X-rays, and my admission bot runs a local LLM through Ollama, so questions stay on the machine.</p>
-      <p>Alongside the models I’ve worked on the business side of systems: mapping workflows, finding the gaps, and presenting designs to stakeholders. Turning a need into a design, then explaining it plainly, is the part I enjoy most.</p>
+      <p>I hold a B.Tech in Computer Science &amp; Engineering from KIIT, and I’m currently pursuing a PGDM in AI &amp; Data Science at Adani Institute of Digital Technology Management.</p>
+      <p>Right now I’m focused on strengthening my skills in machine learning, data science and LLM applications, and on putting them to work through hands-on projects and internships.</p>
     </div>
   </div>
 </section>
@@ -608,9 +662,36 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
 <section class="sec" id="work" aria-labelledby="work-h" style="padding-top:20px">
   <div class="wrap">
     <div class="head">
-      <h2 id="work-h">Four systems, built end to end</h2>
-      <p class="lead">Open one to see how it works. The demos are small illustrations you can poke at, not the real models.</p>
+      <h2 id="work-h">Selected projects</h2>
+      <p class="lead">Open one for the problem, what I built and how it works. The panels on the right are illustrations of the idea, not output from the real models.</p>
     </div>
+
+    <article class="proj" id="p3">
+      <h3><button class="proj-head" type="button" aria-expanded="false" aria-controls="b3">
+        <span class="ttl">Retail Shelf Monitor</span><span class="meta">Computer Vision, Nov to Dec 2025</span><span class="plus" aria-hidden="true"></span>
+      </button></h3>
+      <div class="proj-body" id="b3"><div class="inner"><div class="pad">
+        <div>
+          <p class="lede">Retail Shelf Stock Monitoring and SKU Gap Detection.</p>
+          <dl class="pj">
+            <div><dt>Problem</dt><dd>Spot empty shelf space and likely stock-outs from shelf images.</dd></div>
+            <div><dt>What I built</dt><dd>A computer-vision system for product detection, counting and shelf-gap identification.</dd></div>
+            <div><dt>How it works</dt><dd>Bounding-box localisation and histogram-based segmentation find the products, and K-Means clustering groups them by SKU. Stock trends over time feed a basic forecast that flags potential stock-outs.</dd></div>
+            <div><dt>Status</dt><dd>Project, Nov to Dec 2025.</dd></div>
+            <div><dt>Stack</dt><dd class="tags"><span>Computer Vision</span><span>K-Means</span><span>Forecasting</span></dd></div>
+          </dl>
+        </div>
+        <figure class="viz">
+          <span class="demo-tag">Illustration</span>
+          <div class="shelfwrap" id="shelf"><div class="scanline" id="scanline"></div></div>
+          <div class="row">
+            <button class="btn sm" id="scanBtn" type="button">Scan the shelf</button>
+            <span id="shelfOut" class="legend-t" aria-live="polite">Not scanned yet</span>
+          </div>
+          <figcaption>Colours are SKU groups found by clustering. Click any product to knock it off the shelf, and the scan will find the new gap.</figcaption>
+        </figure>
+      </div></div></div>
+    </article>
 
     <article class="proj" id="p0">
       <h3><button class="proj-head" type="button" aria-expanded="false" aria-controls="b0">
@@ -618,15 +699,18 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
       </button></h3>
       <div class="proj-body" id="b0"><div class="inner"><div class="pad">
         <div>
-          <p class="lede">A ResNet50 classifier that shows its work as well as its answer.</p>
-          <ul>
-            <li>Trained on 27,000 chest X-ray images, with preprocessing and class balancing to handle imbalanced data.</li>
-            <li>Transfer learning and data augmentation reached 93.7% classification accuracy.</li>
-            <li>Grad-CAM shows which lung regions drove each prediction.</li>
-          </ul>
-          <div class="tags"><span>TensorFlow</span><span>ResNet50</span><span>Grad-CAM</span><span>Transfer Learning</span></div>
+          <p class="lede">An image classifier for chest X-rays that also shows which regions it relied on.</p>
+          <dl class="pj">
+            <div><dt>Problem</dt><dd>Detect pneumonia from chest X-ray images on an imbalanced dataset, and make the predictions inspectable.</dd></div>
+            <div><dt>What I built</dt><dd>A ResNet50-based classifier with Grad-CAM visual explanations.</dd></div>
+            <div><dt>How it works</dt><dd>The images are preprocessed and the classes balanced, then transfer learning is applied with data augmentation. Grad-CAM highlights the lung regions that drove each prediction.</dd></div>
+            <div><dt>Result</dt><dd>93.7% classification accuracy, working with 27,000 chest X-ray images.</dd></div>
+            <div><dt>Status</dt><dd>Academic project, Feb to Apr 2024.</dd></div>
+            <div><dt>Stack</dt><dd class="tags"><span>TensorFlow</span><span>ResNet50</span><span>Transfer Learning</span><span>Grad-CAM</span></dd></div>
+          </dl>
         </div>
         <figure class="viz">
+          <span class="demo-tag">Illustration</span>
           <canvas id="gc" width="960" height="840" role="img" aria-label="Stylised chest X-ray with a heat overlay that follows the cursor"></canvas>
           <div class="row">
             <button class="btn sm" id="gcTog" type="button" aria-pressed="true">Attention overlay on</button>
@@ -643,15 +727,17 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
       </button></h3>
       <div class="proj-body" id="b1"><div class="inner"><div class="pad">
         <div>
-          <p class="lede">Answers admission, placement and scholarship questions, only from documents it can point to.</p>
-          <ul>
-            <li>An AI agent system that answers queries from authenticated policy documents.</li>
-            <li>Retrieval-Augmented Generation with PDF ingestion, embeddings and FAISS vector search for document-grounded answers.</li>
-            <li>A local LLM hosted with Ollama for offline, privacy-preserving, low-latency processing.</li>
-          </ul>
-          <div class="tags"><span>FAISS</span><span>Embeddings</span><span>Ollama</span><span>RAG</span></div>
+          <p class="lede">A question-answering assistant that answers only from official documents.</p>
+          <dl class="pj">
+            <div><dt>Problem</dt><dd>Answer admission, placement and scholarship questions from authenticated policy documents, while keeping processing offline.</dd></div>
+            <div><dt>What I built</dt><dd>An AI agent system that uses Retrieval-Augmented Generation over the policy documents.</dd></div>
+            <div><dt>How it works</dt><dd>PDFs are ingested and embedded, and FAISS vector search retrieves the relevant passages so that answers stay grounded in the documents. A local LLM hosted with Ollama handles generation, which keeps it offline, private and low-latency.</dd></div>
+            <div><dt>Status</dt><dd>Project, Nov to Dec 2025.</dd></div>
+            <div><dt>Stack</dt><dd class="tags"><span>Agentic RAG</span><span>Embeddings</span><span>FAISS</span><span>Ollama</span></dd></div>
+          </dl>
         </div>
         <figure class="viz">
+          <span class="demo-tag">Illustration</span>
           <div class="chat-top"><i></i>Admission bot, running locally</div>
           <div class="bubble me" id="ragQ"></div>
           <div class="chunks" id="ragC">
@@ -672,15 +758,17 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
       </button></h3>
       <div class="proj-body" id="b2"><div class="inner"><div class="pad">
         <div>
-          <p class="lede">An interview simulator that asks, listens and gives structured feedback.</p>
-          <ul>
-            <li>LLM-based simulator with contextual question handling and response generation.</li>
-            <li>Backend workflows for dynamic question generation, evaluation logic and structured feedback.</li>
-            <li>Modular architecture that supports real-time interaction and extends to new domains.</li>
-          </ul>
-          <div class="tags"><span>LLMs</span><span>Prompt Engineering</span><span>Backend Workflows</span></div>
+          <p class="lede">An interview simulator that asks questions and gives structured feedback.</p>
+          <dl class="pj">
+            <div><dt>Problem</dt><dd>Practise interview questions and get structured feedback on the answers.</dd></div>
+            <div><dt>What I built</dt><dd>An LLM-based interview simulator with contextual question handling and response generation.</dd></div>
+            <div><dt>How it works</dt><dd>Backend workflows generate questions dynamically, apply evaluation logic and return structured feedback. The architecture is modular, so it can be extended to more domains.</dd></div>
+            <div><dt>Status</dt><dd>Project, Dec 2025.</dd></div>
+            <div><dt>Stack</dt><dd class="tags"><span>LLM Applications</span><span>Prompt Engineering</span><span>Backend Workflows</span></dd></div>
+          </dl>
         </div>
         <figure class="viz" id="iv">
+          <span class="demo-tag">Illustration</span>
           <div class="chips" role="group" aria-label="Interview domain">
             <button type="button" data-d="ml" class="on">Machine learning</button><button type="button" data-d="prod">Product analytics</button><button type="button" data-d="hr">Behavioural</button>
           </div>
@@ -697,30 +785,16 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
       </div></div></div>
     </article>
 
-    <article class="proj" id="p3">
-      <h3><button class="proj-head" type="button" aria-expanded="false" aria-controls="b3">
-        <span class="ttl">Retail Shelf Monitor</span><span class="meta">Computer Vision, Nov to Dec 2025</span><span class="plus" aria-hidden="true"></span>
-      </button></h3>
-      <div class="proj-body" id="b3"><div class="inner"><div class="pad">
-        <div>
-          <p class="lede">Retail Shelf Stock Monitoring and SKU Gap Detection: it counts what’s there and flags what’s missing.</p>
-          <ul>
-            <li>Automated product detection, counting and shelf-gap identification.</li>
-            <li>Bounding box localisation, histogram-based segmentation and K-Means clustering for SKU grouping.</li>
-            <li>Stock trends over time with basic forecasting to flag potential stock-outs.</li>
-          </ul>
-          <div class="tags"><span>Computer Vision</span><span>K-Means</span><span>Forecasting</span></div>
-        </div>
-        <figure class="viz">
-          <div class="shelfwrap" id="shelf"><div class="scanline" id="scanline"></div></div>
-          <div class="row">
-            <button class="btn sm" id="scanBtn" type="button">Scan the shelf</button>
-            <span id="shelfOut" class="legend-t" aria-live="polite">Not scanned yet</span>
-          </div>
-          <figcaption>Colours are SKU groups found by clustering. Click any product to knock it off the shelf, and the scan will find the new gap.</figcaption>
-        </figure>
-      </div></div></div>
-    </article>
+    <div class="gh">
+      <h3>More code on GitHub</h3>
+      <p>Public repositories you can read. These are separate from the four projects listed here.</p>
+      <ul>
+        <li><a href="https://github.com/himanshuxbuilds/campusmate-ai" target="_blank" rel="noopener"><b>CampusMate AI</b><span>A tool-using AI agent for PGDM students. FastAPI backend, SQLAlchemy with SQLite, a Groq-hosted LLM with function calling, and a plain HTML, CSS and JavaScript front end.</span><i>Python</i></a></li>
+        <li><a href="https://github.com/himanshuxbuilds/Expense-Tracker" target="_blank" rel="noopener"><b>Smart Expense Tracker API</b><span>A REST API for tracking personal expenses, built with FastAPI and Pydantic, with JSON file storage and interactive API documentation.</span><i>Python</i></a></li>
+        <li><a href="https://github.com/himanshuxbuilds/Whatsapp-Property-Scraper" target="_blank" rel="noopener"><b>WhatsApp Property Lead Extractor</b><span>A Streamlit app that pulls structured property-lead data out of bulk WhatsApp messages, using a rule-based parser with an optional LLM fallback.</span><i>Python</i></a></li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -728,7 +802,7 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
   <div class="wrap">
     <div class="head">
       <h2 id="proc-h">How I approach a problem</h2>
-      <p class="lead">Four steps I keep coming back to, from the first conversation to the hand-over. Pick one.</p>
+      <p class="lead">Four steps I keep coming back to. Each one points at work I have actually done.</p>
     </div>
     <div class="proc">
       <div class="proc-list" role="tablist" aria-label="Process steps">
@@ -739,24 +813,24 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
       </div>
       <div>
         <div class="proc-panel" role="tabpanel" id="pp0" aria-labelledby="pt0">
-          <h3>Start with how people actually work</h3>
-          <p>Before any model, I map where information gets lost. In my internships that meant documenting recruitment and sales workflows and finding the gaps.</p>
-          <ul><li>A written map of the current workflow</li><li>A short list of gaps, ranked by how much they hurt</li><li>Requirements a developer can build from</li></ul>
+          <h3>Start with how the work is actually done</h3>
+          <p>At Havoc Consultants I analysed recruitment workflows and found gaps in candidate tracking, follow-ups and pipeline visibility. At ClearDeals I documented sales, lead-management and backend workflows to find process gaps.</p>
+          <ul><li>Recruitment workflow analysis at Havoc Consultants</li><li>Sales and lead-management workflow documentation at ClearDeals</li><li>Requirements turned into structured workflows and data requirements</li></ul>
         </div>
         <div class="proc-panel" role="tabpanel" id="pp1" aria-labelledby="pt1" hidden>
-          <h3>Make the data fit for purpose</h3>
-          <p>Cleaning, preprocessing and balancing come before modelling. For the X-ray classifier that meant handling a heavily imbalanced set of 27,000 images.</p>
-          <ul><li>Cleaned and documented data</li><li>Class balancing where the classes are lopsided</li><li>Augmentation when data is limited</li></ul>
+          <h3>Get the data into shape</h3>
+          <p>Preprocessing comes before modelling. For the pneumonia classifier that meant preparing 27,000 chest X-rays and balancing the classes. For the ClearDeals lead scraper it meant turning scraped listings into structured data with Pandas.</p>
+          <ul><li>Preprocessing and class balancing in Pneumonia Detection</li><li>Data augmentation in Pneumonia Detection</li><li>Structured data processing with Pandas in the ClearDeals lead scraper</li></ul>
         </div>
         <div class="proc-panel" role="tabpanel" id="pp2" aria-labelledby="pt2" hidden>
-          <h3>Measure honestly, then look inside</h3>
-          <p>Transfer learning gives a strong start with limited data. I measure accuracy, then use tools like Grad-CAM to check the model is looking at the right things.</p>
-          <ul><li>A baseline and a clear evaluation</li><li>Interpretability plots that show what drove a prediction</li><li>Notes on where the model is likely to fail</li></ul>
+          <h3>Model, measure, then look inside</h3>
+          <p>For the X-ray classifier I used transfer learning with ResNet50, measured classification accuracy, and used Grad-CAM to see which regions drove each prediction. For the shelf monitor I used K-Means to group products by SKU.</p>
+          <ul><li>Transfer learning with ResNet50</li><li>Classification accuracy as the measure</li><li>Grad-CAM to inspect predictions</li><li>K-Means clustering for SKU grouping</li></ul>
         </div>
         <div class="proc-panel" role="tabpanel" id="pp3" aria-labelledby="pt3" hidden>
-          <h3>Ship something people can use</h3>
-          <p>A model nobody can use doesn’t help anyone. I wrap the work in a Streamlit app or a backend workflow and explain it in plain language so stakeholders can act on it.</p>
-          <ul><li>A working app or workflow, not just a notebook</li><li>Documentation written for non-technical readers</li><li>A walkthrough for the people who will use it</li></ul>
+          <h3>Put it in a usable form and explain it</h3>
+          <p>The ClearDeals lead scraper runs as a Streamlit app, and the interview bot is organised as backend workflows. At Ethika I helped design and present OPD benefit models to business stakeholders.</p>
+          <ul><li>A Streamlit app for the lead scraper</li><li>Backend workflows for the interview bot</li><li>Benefit models presented to business stakeholders at Ethika</li></ul>
         </div>
       </div>
     </div>
@@ -768,10 +842,21 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
   <div class="wrap">
     <div class="head">
       <h2 id="exp-h">Where I’ve worked</h2>
-      <p class="lede lead" style="font-weight:400;font-family:var(--body);letter-spacing:0">Three internships, three industries, one habit: understand the workflow first, then design the system.</p>
+      <p class="lede lead" style="font-weight:400;font-family:var(--body);letter-spacing:0">Internships so far, newest first. The titles are business-facing; the work has been analysis, system design and some hands-on building.</p>
     </div>
     <div class="tl" id="tl">
       <div class="prog" aria-hidden="true"></div>
+
+      <div class="job">
+        <div class="when">Current<small>Amnex Infotechnologies</small></div>
+        <div>
+          <h3>Business Analyst Intern</h3>
+          <p class="co">Mobility Business Unit</p>
+          <ul>
+            <li>Working in the Transit and Post-sales area of the Mobility Business Unit.</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="job">
         <div class="when">May to Aug 2026<small>Havoc Consultants Pvt. Ltd.</small></div>
@@ -820,13 +905,13 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
   <div class="wrap">
     <div class="head">
       <h2 id="tool-h">What I work with</h2>
-      <p class="lead">All 32 tools as one floating neural network. Coloured dots are tools, and the big rings are the projects and internships that used them.</p>
+      <p class="lead">Each tool is linked to the project or internship where I used it. Hollow dots are tools I know but have not tied to a project here.</p>
     </div>
     <div class="nnet" id="smap">
       <p class="sm-info" id="smapInfo" aria-live="polite"></p>
       <div class="nn-float" id="nnFloat"><canvas id="nnCv" role="img" aria-label="A floating network linking 32 tools to the projects and internships where they were used. The same information is listed after this graphic."></canvas></div>
       <div class="nn-actions"><button class="nn-secret" type="button" id="nnRe" aria-label="Rearrange the network"><i></i><i></i><i></i></button></div>
-      <ul class="vh" id="nnList"></ul>
+      <details class="tk-list"><summary>View the same information as a list</summary><div class="tk-grid" id="nnList"></div></details>
     </div>
   </div>
 </section>
@@ -861,7 +946,7 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
         <button class="btn" id="copy" type="button">Copy email</button>
       </div>
       <ul class="links">
-        <li><span>Phone</span><a href="tel:+918109377760">+91 8109377760</a></li>
+        <li><span>Phone</span><a href="tel:+918109377760">+91&nbsp;8109377760</a></li>
         <li><span>GitHub</span><a href="https://github.com/himanshuxbuilds" target="_blank" rel="noopener">github.com/himanshuxbuilds</a></li>
         <li><span>LinkedIn</span><a href="https://linkedin.com/in/himanshupradhan86929" target="_blank" rel="noopener">linkedin.com/in/himanshupradhan86929</a></li>
         <li><span>Based in</span><b>Ahmedabad, India. <span id="clock"></span></b></li>
@@ -870,11 +955,11 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
     </div>
     <form class="cform" id="cform" novalidate>
       <h3>Send a message</h3>
-      <label for="cName">Your name<input id="cName" type="text" autocomplete="name" required></label>
-      <label for="cEmail">Your email<input id="cEmail" type="email" autocomplete="email" required></label>
-      <label for="cMsg">Message<textarea id="cMsg" rows="5" required></textarea></label>
+      <div class="fld"><label for="cName">Your name</label><input id="cName" type="text" autocomplete="name" aria-describedby="cNameE" required><span class="ferr" id="cNameE" role="alert"></span></div>
+      <div class="fld"><label for="cEmail">Your email</label><input id="cEmail" type="email" autocomplete="email" aria-describedby="cEmailE" required><span class="ferr" id="cEmailE" role="alert"></span></div>
+      <div class="fld"><label for="cMsg">Message</label><textarea id="cMsg" rows="5" maxlength="2000" aria-describedby="cMsgE" required></textarea><span class="ferr" id="cMsgE" role="alert"></span></div>
       <button class="btn solid" type="submit">Send from my email app</button>
-      <p class="fn2" id="cNote" aria-live="polite">This opens your email app with the message filled in, ready to send.</p>
+      <p class="fn2" id="cNote" aria-live="polite">There is no server behind this form. Sending opens your own email app with the message filled in.</p>
     </form>
   </div>
 </section>
@@ -882,7 +967,7 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
 
 <footer>
   <div class="wrap foot">
-    <div><b>Himanshu Pradhan</b><p>Machine Learning, Computer Vision and LLM Systems. Based in Ahmedabad, India.</p></div>
+    <div><b>Himanshu Pradhan</b><p>AI, Data Science and software projects. Based in Ahmedabad, India.</p></div>
     <div><h4>Explore</h4><ul><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#experience">Experience</a></li><li><a href="#toolkit">Toolkit</a></li></ul></div>
     <div><h4>Elsewhere</h4><ul><li><a href="https://github.com/himanshuxbuilds" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://linkedin.com/in/himanshupradhan86929" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="mailto:pradhanhimanshu86929@gmail.com">Email</a></li><li><a href="Himanshu_Pradhan_CV.pdf" download>Download CV</a></li></ul></div>
     <button class="btn sm" id="toTop" type="button">Back to top</button>
@@ -893,8 +978,7 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
 <nav class="dots" aria-label="Sections">
   <a href="#hero" data-s="hero"><span>Top</span></a><a href="#about" data-s="about"><span>About</span></a><a href="#work" data-s="work"><span>Work</span></a><a href="#process" data-s="process"><span>Process</span></a><a href="#experience" data-s="experience"><span>Experience</span></a><a href="#toolkit" data-s="toolkit"><span>Toolkit</span></a><a href="#education" data-s="education"><span>Education</span></a><a href="#contact" data-s="contact"><span>Contact</span></a>
 </nav>
-<div class="corner l">Ahmedabad <span id="cClock"></span></div>
-<div class="corner r" id="cornerR">x 0, y 0</div>
+<div class="corner l" aria-hidden="true">Ahmedabad <span id="cClock"></span></div>
 <div class="ring" id="ring" aria-hidden="true"><i></i></div>
 
 <div class="tour" id="tour" role="region" aria-label="Guided tour" hidden>
@@ -907,15 +991,16 @@ footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--c1),var(--c
   <h2 id="recH">Profile at a glance</h2>
   <p class="lead">The essentials, in one place.</p>
   <dl class="rec">
-    <div><dt>Who</dt><dd>Computer Science graduate (B.Tech, KIIT) doing a PGDM in AI &amp; Data Science. Based in Ahmedabad.</dd></div>
-    <div><dt>Looking for</dt><dd>Data Science and AI-Native Developer opportunities.</dd></div>
-    <div><dt>Proof</dt><dd><ul>
-      <li>Pneumonia classifier: 93.7% accuracy on 27,000 chest X-rays, explained with Grad-CAM.</li>
-      <li>Agentic RAG admission bot on a local LLM (Ollama) with FAISS retrieval.</li>
-      <li>Three internships across recruitment, proptech and insurtech, with scrapers, CRM modules and workflow designs shipped.</li>
+    <div><dt>Who</dt><dd>Computer Science graduate (B.Tech, KIIT) pursuing a PGDM in AI &amp; Data Science. Currently a Business Analyst Intern at Amnex Infotechnologies, Mobility Business Unit. Based in Ahmedabad.</dd></div>
+    <div><dt>Looking for</dt><dd>Data Science and AI-Native Developer opportunities, with a preference for hands-on engineering work.</dd></div>
+    <div><dt>Projects</dt><dd><ul>
+      <li>Pneumonia Detection: a ResNet50 classifier with Grad-CAM explanations, 93.7% accuracy.</li>
+      <li>Admission Inquiry Bot: Agentic RAG with FAISS retrieval on a local LLM (Ollama).</li>
+      <li>CampusMate AI: a tool-using agent with a FastAPI backend, public on GitHub.</li>
     </ul></dd></div>
-    <div><dt>Stack</dt><dd>Python, SQL, TensorFlow, Pandas, FAISS, Ollama, Streamlit.</dd></div>
-    <div><dt>Strength</dt><dd>Turning a business need into a technical design and explaining it plainly.</dd></div>
+    <div><dt>Experience</dt><dd>Internships at Amnex Infotechnologies, Havoc Consultants, Proptech ClearDeals and Ethika Insurtech Broking.</dd></div>
+    <div><dt>Stack</dt><dd>Python, SQL, TensorFlow, Pandas, FAISS, Ollama, Streamlit, FastAPI.</dd></div>
+    <div><dt>Strength</dt><dd>Understanding a business problem well enough to design and build the technical fix.</dd></div>
   </dl>
   <div class="rec-act">
     <a class="btn solid" href="Himanshu_Pradhan_CV.pdf" download>Download CV</a>
@@ -965,6 +1050,7 @@ addEventListener('themechange',readColors);
 function setTheme(t,x,y){
   const apply=()=>{
     root.setAttribute('data-theme',t);
+    try{sessionStorage.setItem('hp-theme',t)}catch(e){}
     $('#theme').setAttribute('aria-label',t==='dark'?'Switch to light theme':'Switch to dark theme');
     $('meta[name="theme-color"]').setAttribute('content',t==='dark'?'#0E1124':'#EDF0F7');
     dispatchEvent(new Event('themechange'));
@@ -1031,7 +1117,7 @@ addEventListener('keydown',e=>{
   const wave=()=>[run(.8,hop)];
   function schedule(){
     clearTimeout(idleT);
-    idleT=setTimeout(()=>{if(document.hidden){schedule();return}play([wave,spin,eq,wave][(Math.random()*4)|0]())},5200+Math.random()*3200);
+    idleT=setTimeout(()=>{if(document.hidden){schedule();return}play([wave,spin,eq,wave][(Math.random()*4)|0]())},14000+Math.random()*8000);
   }
   logo.addEventListener('mouseenter',()=>play([to(.2,dots(0))].concat(intro())));
   logo.addEventListener('focus',()=>play(spin()));
@@ -1040,7 +1126,7 @@ addEventListener('keydown',e=>{
 
 /* ---------- hero: k-nearest-neighbours lab (live) ---------- */
 (function(){
-  const cv=$('#lab-cv'),ctx=cv.getContext('2d'),curEl=$('#labCur'),accEl=$('#labAcc'),lab=$('#lab'),pauseBtn=$('#labPause'),liveT=$('#labLive b');
+  const cv=$('#lab-cv'),ctx=cv.getContext('2d'),curEl=$('#labCur'),accEl=$('#labAcc'),lab=$('#lab'),pauseBtn=$('#labPause'),liveT=$('#labLive b'),emptyEl=$('#labEmpty'),clearBtn=$('#labClear');
   const GX=64,GY=52;
   const off=document.createElement('canvas');off.width=GX;off.height=GY;
   const octx=off.getContext('2d'),img=octx.createImageData(GX,GY);
@@ -1087,9 +1173,10 @@ addEventListener('keydown',e=>{
   function readout(){
     const pr=cur||(paused?null:ghost);
     if(pr&&pts.length){const pa=Math.round(knn(pr.x,pr.y,-1)*100);curEl.innerHTML=`${cur?'At the cursor':'Auto-probe'}: <b>${pa}% Class A</b>, <b>${100-pa}% Class B</b>.`}
-    else curEl.textContent='Hover over the plot to probe it.';
+    else curEl.textContent=pts.length?'Hover over the plot to probe it.':'The plot is empty. Each tap or click adds a point of the selected class.';
     const a=loo();
-    accEl.innerHTML=a===null?'Add a few points to see how well it fits.':`Leave-one-out accuracy: <b>${a}%</b>`;
+    const none=!pts.length;lab.classList.toggle('empty',none);emptyEl.hidden=!none;clearBtn.disabled=none;
+    accEl.innerHTML=none?'New data brings back a sample set.':a===null?'Add a few more points to see how well it fits.':`Leave-one-out accuracy: <b>${a}%</b>`;
   }
   function ease(a){const c=1.70158;return 1+(c+1)*Math.pow(a-1,3)+c*Math.pow(a-1,2)}
   function draw(now){
@@ -1104,7 +1191,7 @@ addEventListener('keydown',e=>{
       ctx.fillStyle=PAL[p.c];ctx.strokeStyle=ink;ctx.lineWidth=2;
       ctx.beginPath();ctx.arc(p.x*W,p.y*H,r,0,6.283);ctx.fill();ctx.stroke();
     }
-    const pr=cur||(paused?null:ghost);
+    const pr=cur||(paused||!pts.length?null:ghost);
     if(pr){
       const x=pr.x*W,y=pr.y*H;
       ctx.strokeStyle=ink;ctx.globalAlpha=cur?.5:.22;ctx.lineWidth=1;
@@ -1129,7 +1216,7 @@ addEventListener('keydown',e=>{
     if(moving&&now-lastRegion>140){paintRegions();lastRegion=now}
     if((moving||cur)&&now-lastRead>260){readout();lastRead=now}
     draw(now);
-    raf=(visible&&!document.hidden&&(!paused||regionA<1||now<until))?requestAnimationFrame(frame):0;
+    raf=(visible&&!document.hidden&&((!paused&&(pts.length||cur))||regionA<1||now<until))?requestAnimationFrame(frame):0;
   }
   const start=()=>{if(!raf&&visible&&!document.hidden)raf=requestAnimationFrame(frame)};
   const kick=ms=>{until=Math.max(until,performance.now()+ms);start()};
@@ -1349,7 +1436,7 @@ const shelf=(()=>{
 })();
 
 /* ---------- project accordion ---------- */
-const V=[gc,rag,iv,shelf],projs=$$('.proj');
+const projs=$$('.proj'),V=projs.map(p=>({p0:gc,p1:rag,p2:iv,p3:shelf})[p.id]);
 function setOpen(i){
   projs.forEach((p,j)=>{
     const on=i===j,was=p.classList.contains('open');
@@ -1361,7 +1448,7 @@ function setOpen(i){
 }
 projs.forEach((p,i)=>$('.proj-head',p).addEventListener('click',()=>setOpen(p.classList.contains('open')?-1:i)));
 const workIO=new IntersectionObserver(es=>{if(es[0].isIntersecting){workIO.disconnect();setOpen(0)}},{threshold:.25});
-workIO.observe($('#p0'));
+workIO.observe(projs[0]);
 
 /* ---------- experience timeline progress ---------- */
 const tl=$('#tl');
@@ -1376,19 +1463,19 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   const wrap=$('#nnFloat'),cv=$('#nnCv'),ctx=cv.getContext('2d'),info=$('#smapInfo');
   const PR=[['pd','Pneumonia Detection',.09,.13],['ab','Admission Inquiry Bot',.60,.09],['ib','AI Interview Bot',.83,.12],['sm','Retail Shelf Monitor',.09,.9],['hv','Havoc Consultants',.87,.9],['cd','Proptech ClearDeals',.58,.92],['et','Ethika Insurtech',.955,.3]];
   const AR=[
-    {n:'Languages',ci:0,ax:.42,ay:.2,t:[['Python','pd ab ib sm cd'],['SQL',''],['JavaScript','']]},
-    {n:'Machine Learning',ci:4,ax:.21,ay:.52,t:[['TensorFlow','pd'],['CNNs','pd'],['Transfer Learning','pd'],['ResNet50','pd'],['K-Means','sm'],['Data Augmentation','pd'],['Forecasting','sm'],['Model Evaluation','pd'],['Grad-CAM','pd']]},
-    {n:'Data',ci:2,ax:.43,ay:.68,t:[['NumPy',''],['Pandas','cd'],['Matplotlib',''],['Seaborn',''],['Data Preprocessing','pd cd'],['Class Balancing','pd']]},
-    {n:'LLMs and Agents',ci:3,ax:.66,ay:.36,t:[['Agentic RAG','ab'],['Embeddings','ab'],['FAISS','ab'],['Ollama','ab'],['Prompt Engineering','ib'],['LLM Applications','ab ib']]},
-    {n:'Build and Ship',ci:5,ax:.72,ay:.74,t:[['Streamlit','cd'],['Selenium','cd'],['Odoo CRM','cd'],['Backend Workflows','ib cd']]},
-    {n:'Business',ci:1,ax:.9,ay:.6,t:[['Requirements Analysis','hv'],['Stakeholder Coordination','et'],['Process Optimisation','hv cd'],['Research and Documentation','cd et']]}
+    {n:'Programming Languages',ci:0,ax:.42,ay:.2,t:[['Python','pd ab ib sm cd'],['SQL','','covered by my SQL and Relational Databases certificate'],['JavaScript','']]},
+    {n:'AI & Machine Learning',ci:4,ax:.21,ay:.52,t:[['TensorFlow','pd'],['CNNs','pd'],['Transfer Learning','pd'],['ResNet50','pd'],['K-Means','sm'],['Data Augmentation','pd'],['Forecasting','sm'],['Model Evaluation','pd'],['Grad-CAM','pd']]},
+    {n:'Data Science & Analytics',ci:2,ax:.43,ay:.68,t:[['NumPy',''],['Pandas','cd'],['Matplotlib',''],['Seaborn',''],['Data Preprocessing','pd cd'],['Class Balancing','pd']]},
+    {n:'LLMs & Agents',ci:3,ax:.66,ay:.36,t:[['Agentic RAG','ab'],['Embeddings','ab'],['FAISS','ab'],['Ollama','ab'],['Prompt Engineering','ib'],['LLM Applications','ab ib']]},
+    {n:'Backend & Tools',ci:5,ax:.72,ay:.74,t:[['Streamlit','cd'],['Selenium','cd'],['Odoo CRM','cd'],['Backend Workflows','ib cd']]},
+    {n:'Analysis & Communication',ci:1,ax:.9,ay:.6,t:[['Requirements Analysis','hv'],['Stakeholder Coordination','et'],['Process Optimisation','hv cd'],['Research and Documentation','cd et']]}
   ];
   const N=[],E=[],pk={},pname={};
   PR.forEach(([k,n,au,av])=>{const o={kind:'proj',name:n,key:k,ci:-1,u:[k],au,av};pk[k]=o;pname[k]=n;N.push(o)});
   AR.forEach(a=>{
     const hub={kind:'area',name:a.n,ci:a.ci,u:[],au:a.ax,av:a.ay};N.push(hub);
-    a.t.forEach(([n,u])=>{
-      const t={kind:'tool',name:n,ci:a.ci,area:a.n,u:u?u.split(' '):[]};N.push(t);
+    a.t.forEach(([n,u,note])=>{
+      const t={kind:'tool',name:n,ci:a.ci,area:a.n,note,u:u?u.split(' '):[]};N.push(t);
       E.push({a:hub,b:t,kind:'area'});t.u.forEach(k=>E.push({a:t,b:pk[k],kind:'use'}));
     });
   });
@@ -1396,9 +1483,9 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   E.forEach((e,i)=>{e.a.nb.add(e.b);e.b.nb.add(e.a);e.a.out.push(e);e.bend=((i%2)?1:-1)*(.06+((i*37)%9)/100);e.cx=e.cy=0});
   const tools=N.filter(n=>n.kind==='tool'),projs=N.filter(n=>n.kind==='proj'),areas=N.filter(n=>n.kind==='area');
   const list=a=>a.length>1?a.slice(0,-1).join(', ')+' and '+a[a.length-1]:a[0];
-  $('#nnList').innerHTML=tools.map(t=>`<li>${t.name} (${t.area}): ${t.u.length?'used in '+list(t.u.map(k=>pname[k])):'part of the wider toolkit'}</li>`).join('');
+  $('#nnList').innerHTML=areas.map(h=>`<div><h3>${h.name}</h3><ul>${[...h.nb].map(t=>`<li>${t.name} <span>${t.u.length?'used in '+list(t.u.map(k=>pname[k])):(t.note||'not tied to a project here')}</span></li>`).join('')}</ul></div>`).join('');
   let W=0,H=0,dpr=1,small=false,tall=false,INK='',ACC='',MUTE='',HALO='',hov=null,drag=null,moved=false,lens=null,mouse=null,pulses=[],raf=0,vis=false,started=false,t0=0,ready=false;
-  const FONT='Figtree,system-ui,sans-serif';
+  const FONT='Figtree,system-ui,sans-serif',PIN=matchMedia('(pointer: coarse)').matches?'Pinned. Tap to release.':'Pinned. Click to release.';
   function colors(){INK=css('--ink');ACC=css('--accent');MUTE=css('--mute');HALO=css('--bg')}
   function place(){N.forEach(n=>{if(n.au==null)return;const mx=n.hw+10;n.ax=clamp((tall?n.av:n.au)*W,mx,W-mx);n.ay=clamp((tall?n.au:n.av)*H,n.top+12,H-n.bot-12)})}
   function metrics(){
@@ -1443,7 +1530,7 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
       const L=use?(small?150:210):(small?72:98),f=use?(d>L?(d-L)*.0011:0):(d-L)*.012,ux=dx/d,uy=dy/d;
       e.a.vx+=ux*f;e.a.vy+=uy*f;e.b.vx-=ux*f;e.b.vy-=uy*f;
     }
-    const cs=soft>0?.6*Math.pow(1-soft/170,2):.6;if(soft>0)soft--;
+    const cs=.6;
     for(let i=0;i<N.length;i++)for(let j=i+1;j<N.length;j++){
       const a=N[i],b=N[j],dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy+.01;
       if(d2<90000){const d=Math.sqrt(d2),f=1500/d2;a.vx-=dx/d*f;a.vy-=dy/d*f;b.vx+=dx/d*f;b.vy+=dy/d*f}
@@ -1508,6 +1595,11 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
         ctx.globalAlpha=a;ctx.strokeText(n.lines[i],n.x,y);ctx.fillStyle=base;ctx.fillText(n.lines[i],n.x,y);
         if(n.hot>.01&&n.kind!=='area'){ctx.globalAlpha=a*n.hot;ctx.fillStyle=ACC;ctx.fillText(n.lines[i],n.x,y)}
       }
+      if(lens&&n===pk[lens]){
+        const y=n.y+n.r+7+n.lines.length*n.lh;
+        ctx.globalAlpha=a;ctx.font=`600 ${small?10.5:12}px ${FONT}`;ctx.lineWidth=4;ctx.strokeStyle=HALO;ctx.strokeText(PIN,n.x,y);ctx.fillStyle=ACC;ctx.fillText(PIN,n.x,y);
+        ctx.lineWidth=1.5;ctx.strokeStyle=ACC;ctx.setLineDash([3,4]);ctx.beginPath();ctx.arc(n.x,n.y,n.r*1.25+7,0,6.283);ctx.stroke();ctx.setLineDash([]);
+      }
     }
     ctx.globalAlpha=1;
   }
@@ -1541,10 +1633,10 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   const start=()=>{if(!ready)return;if(reduce){draw(performance.now());return}if(!raf&&vis&&!document.hidden)raf=requestAnimationFrame(frame)};
   function say(){
     const f=hov||(lens?pk[lens]:null);
-    if(!f){info.innerHTML=`<span><b>${tools.length} tools</b>, six areas, ${projs.length} projects and internships. ${matchMedia('(pointer: coarse)').matches?'Tap a node or a ring.':'Hover a node, click a ring, or drag anything.'}</span>`;return}
-    if(f.kind==='tool')info.innerHTML=f.u.length?`<span><b>${f.name}</b> (${f.area}): used in ${list(f.u.map(k=>pname[k]))}.</span>`:`<span><b>${f.name}</b> (${f.area}): part of my wider toolkit, not linked to one project here.</span>`;
+    if(!f){info.innerHTML=`<span><b>${tools.length} tools</b>, six areas, ${projs.length} projects and internships. ${matchMedia('(pointer: coarse)').matches?'Tap a node to trace it, or a ring to pin it.':'Hover a node to trace it, click a ring to pin it, or drag anything.'}</span>`;return}
+    if(f.kind==='tool')info.innerHTML=f.u.length?`<span><b>${f.name}</b> (${f.area}): used in ${list(f.u.map(k=>pname[k]))}.</span>`:`<span><b>${f.name}</b> (${f.area}): ${f.note||'part of my wider toolkit, not linked to one project here'}.</span>`;
     else if(f.kind==='area')info.innerHTML=`<span><b>${f.name}</b>: ${f.nb.size} tools. ${list([...f.nb].map(m=>m.name))}.</span>`;
-    else{const t=[...f.nb].map(m=>m.name);info.innerHTML=`<span><b>${f.name}</b> drew on ${t.length} tools: ${list(t)}.${lens===f.key?' Click the ring again to clear.':''}</span>`}
+    else{const t=[...f.nb].map(m=>m.name);info.innerHTML=`<span><b>${f.name}</b> drew on ${t.length} tools: ${list(t)}.${lens===f.key?' Pinned: click the ring again, or any empty space, to release.':''}</span>`}
   }
   const inside=(n,x,y,m)=>x>=n.x-n.hw-m&&x<=n.x+n.hw+m&&y>=n.y-n.top-m&&y<=n.y+n.bot+m;
   function hit(x,y){
@@ -1557,6 +1649,7 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   }
   const rel=e=>{const r=cv.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top}};
   let hovT=0,downAt=null;
+  const setLens=k=>{lens=k;say();if(reduce)draw(performance.now())};
   function setHov(n){if(n===hov)return;hov=n;cv.style.cursor=n?(drag?'grabbing':'grab'):'default';say();if(reduce)draw(performance.now())}
   /* leaving a node waits a moment before fading back, so crossing gaps between nodes does not flash */
   function wantHov(n){
@@ -1576,15 +1669,19 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   });
   cv.addEventListener('pointerup',e=>{
     const p=rel(e),n=hit(p.x,p.y),wasDrag=drag;drag=null;
-    if(e.pointerType==='touch'){mouse=null;if(n&&n.kind==='proj'){lens=lens===n.key?null:n.key;hov=null;say()}else setHov(n);return}
-    if(wasDrag&&!moved&&wasDrag.kind==='proj'){lens=lens===wasDrag.key?null:wasDrag.key;say()}
+    const still=!!downAt&&Math.hypot(p.x-downAt.x,p.y-downAt.y)<=5;
+    if(e.pointerType==='touch'){mouse=null;hov=null;if(n&&n.kind==='proj')setLens(lens===n.key?null:n.key);else{if(!n&&still)lens=null;setHov(n);setLens(lens)}return}
+    if(wasDrag&&!moved&&wasDrag.kind==='proj')setLens(lens===wasDrag.key?null:wasDrag.key);
+    if(!wasDrag&&!n&&still&&lens)setLens(null);
     if(wasDrag&&moved&&wasDrag.ax!=null){wasDrag.ax=clamp(wasDrag.x,wasDrag.hw+10,W-wasDrag.hw-10);wasDrag.ay=clamp(wasDrag.y,wasDrag.top+10,H-wasDrag.bot-10)}
     cv.style.cursor=hov?'grab':'default';
   });
   cv.addEventListener('pointerleave',()=>{if(drag)return;mouse=null;wantHov(null)});
+  cv.addEventListener('pointercancel',()=>{drag=null;mouse=null;wantHov(null)});
+  addEventListener('keydown',e=>{if(e.key==='Escape'&&lens&&!document.querySelector('dialog[open]'))setLens(null)});
 
   /* scrolling nudges the whole network, which then springs back: a little inertia */
-  let lastY=scrollY,kick=0,flip=0,soft=0,tween=null,rot=0;
+  let lastY=scrollY,kick=0,flip=0,tween=null,rot=0;
   addEventListener('scroll',()=>{const y=scrollY,d=clamp(y-lastY,-90,90);lastY=y;if(vis&&!reduce)kick+=d},{passive:true});
   projs.concat(areas).forEach(n=>{n.bu=n.au;n.bv=n.av});
   /* rearranging works out the new layout first, then glides every node to it */
@@ -1641,13 +1738,19 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   const tick=()=>{clock.textContent='It’s '+new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'})+' there right now.'};
   tick();setInterval(tick,30000);
   const form=$('#cform'),note=$('#cNote');
+  const fields=[['cName',v=>v?'':'Please add your name.'],['cEmail',v=>/^\S+@\S+\.\S+$/.test(v)?'':'Please enter a valid email address.'],['cMsg',v=>v?'':'Please write a short message.']];
+  fields.forEach(([id])=>$('#'+id).addEventListener('input',()=>{$('#'+id).removeAttribute('aria-invalid');$('#'+id+'E').textContent=''}));
   form.addEventListener('submit',e=>{
-    e.preventDefault();
+    e.preventDefault();let first=null;
+    fields.forEach(([id,check])=>{
+      const el=$('#'+id),msg=check(el.value.trim());$('#'+id+'E').textContent=msg;
+      if(msg){el.setAttribute('aria-invalid','true');first=first||el}else el.removeAttribute('aria-invalid');
+    });
+    if(first){note.textContent='Nothing was sent. Fix the highlighted fields and try again.';first.focus();return}
     const name=$('#cName').value.trim(),email=$('#cEmail').value.trim(),msg=$('#cMsg').value.trim();
-    if(!name||!msg||!/^\S+@\S+\.\S+$/.test(email)){note.textContent='Add your name, a valid email and a message, then try again.';return}
     if(window.__framed){window.__mailFallback(name,email,msg);return}
     location.href='mailto:'+mail+'?subject='+encodeURIComponent('Portfolio enquiry from '+name)+'&body='+encodeURIComponent(msg+'\n\n'+name+'\n'+email);
-    note.textContent='Your email app should open with the message ready. If nothing happens, write to '+mail+'.';
+    note.textContent='Your email app should open with the message ready. Nothing is sent from this page itself. If it does not open, write to '+mail+'.';
   });
 })();
 
@@ -1680,14 +1783,15 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   /* ask */
   const FALLBACK='I only know what’s on this site, so I can’t answer that one. Try one of the suggested questions, or email pradhanhimanshu86929@gmail.com.';
   const QA=[
-    {q:'What does Himanshu build?',k:['build','built','project','make','made','work on'],a:'Machine-learning and LLM systems, end to end: a ResNet50 pneumonia classifier (93.7% accuracy on 27,000 X-rays, explained with Grad-CAM), an agentic RAG admission bot on a local LLM, a computer-vision shelf monitor and an AI interview simulator.'},
-    {q:'Which project should I look at first?',k:['first','best','strongest','recommend','which project','highlight'],a:'Start with the pneumonia detector: it has the clearest result and shows interpretability. For LLM work, open the admission inquiry bot. Both have demos in the Work section.'},
-    {q:'Has he worked with LLMs?',k:['llm','rag','gpt','genai','generative','ollama','prompt','language model'],a:'Yes. The admission bot uses Retrieval-Augmented Generation with embeddings and FAISS, running a local LLM through Ollama. The interview bot is also LLM-based, and he has IBM certificates in generative AI and prompt engineering.'},
-    {q:'What experience does he have?',k:['experience','intern','job','worked','company','companies'],a:'Three internships: Recruitment at Havoc Consultants (May to Aug 2026), Full Stack at Proptech ClearDeals (Apr to May 2026), and Strategic Partnerships at Ethika Insurtech Broking (Feb to Apr 2025).'},
-    {q:'Which tools and skills?',k:['skill','tool','stack','python','sql','tech','language','framework','tensorflow'],a:'Python, SQL and JavaScript; TensorFlow, Pandas, NumPy, FAISS, Ollama and Streamlit; plus requirements analysis and explaining technical ideas to non-technical audiences.'},
-    {q:'Is he available?',k:['available','hire','hiring','open to','looking','internship','opportunit','availability'],a:'He’s open to Data Science and AI-Native Developer opportunities. Email pradhanhimanshu86929@gmail.com or use the contact form at the bottom of the page.'},
+    {q:'What has Himanshu built?',k:['build','built','project','make','made','work on'],a:'Four projects are described on this page: a ResNet50 pneumonia classifier with Grad-CAM explanations (93.7% accuracy, working with 27,000 chest X-rays), an Agentic RAG admission bot on a local LLM, an LLM interview simulator and a computer-vision shelf monitor. His GitHub also has a FastAPI-based AI agent (CampusMate AI) and a REST API for expense tracking.'},
+    {q:'Which project should I look at first?',k:['first','best','strongest','recommend','which project','highlight'],a:'Start with Pneumonia Detection: it has the clearest result and shows how the model’s predictions are inspected. For LLM work, open the Admission Inquiry Bot. For code you can read, see the repositories under More code on GitHub.'},
+    {q:'Has he worked with LLMs?',k:['llm','rag','gpt','genai','generative','ollama','prompt','language model','agent'],a:'Yes. The Admission Inquiry Bot uses Retrieval-Augmented Generation with embeddings and FAISS on a local LLM run through Ollama. The AI Interview Bot is also LLM-based. He holds IBM certificates in Generative AI and Prompt Engineering.'},
+    {q:'What experience does he have?',k:['experience','intern','job','worked','company','companies','amnex'],a:'He is currently a Business Analyst Intern at Amnex Infotechnologies in the Mobility Business Unit. Before that: Recruitment Intern at Havoc Consultants (May to Aug 2026), Full Stack Intern at Proptech ClearDeals (Apr to May 2026) and Strategic Partnerships Intern at Ethika Insurtech Broking (Feb to Apr 2025).'},
+    {q:'Which tools and skills?',k:['skill','tool','stack','python','sql','tech','language','framework','tensorflow'],a:'Python is the common thread. For machine learning: TensorFlow, CNNs, transfer learning and Grad-CAM. For LLM work: RAG, embeddings, FAISS and Ollama. For building: Streamlit, Selenium and Odoo CRM. The Toolkit section links each one to where it was used.'},
+    {q:'Where can I see his code?',k:['code','github','repo','repository','source'],a:'On GitHub at github.com/himanshuxbuilds. The Work section links three public repositories: CampusMate AI, Smart Expense Tracker API and WhatsApp Property Lead Extractor.'},
+    {q:'Is he available?',k:['available','hire','hiring','open to','looking','opportunit','availability','role'],a:'He is open to Data Science and AI-Native Developer opportunities, with a preference for hands-on engineering work. Email pradhanhimanshu86929@gmail.com or use the contact form at the bottom of the page.'},
     {q:'Where did he study?',k:['study','studied','education','college','university','degree','kiit','adani','pgdm','b.tech','btech'],a:'B.Tech in Computer Science & Engineering at KIIT, Odisha (2021 to 2025), and now a PGDM in AI & Data Science at Adani Institute of Digital Technology Management, Gujarat.'},
-    {q:'How do I contact him?',k:['contact','reach','email','phone','call','linkedin','github','message'],a:'Email pradhanhimanshu86929@gmail.com, call +91 8109377760, or find him on GitHub (himanshuxbuilds) and LinkedIn (himanshupradhan86929).'}
+    {q:'How do I contact him?',k:['contact','reach','email','phone','call','linkedin','message'],a:'Email pradhanhimanshu86929@gmail.com, call +91 8109377760, or find him on GitHub (himanshuxbuilds) and LinkedIn (himanshupradhan86929).'}
   ];
   const chips=$('#askChips'),log=$('#askLog'),inp=$('#askIn');let atok=0;
   async function ask(q,hit){
@@ -1712,9 +1816,9 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   const TOUR=[
     {id:'hero',t:'Start with the plot: it’s a k-nearest-neighbours classifier. Add points, then flip k between 1 and 15.'},
     {id:'about',t:'The short version of who I am and what I care about.'},
-    {id:'work',t:'Four projects, each with a small demo you can poke at.'},
-    {id:'process',t:'How I approach a problem, from the first conversation to hand-over.'},
-    {id:'experience',t:'Three internships across recruitment, proptech and insurtech.'},
+    {id:'work',t:'Four projects with the problem, the build and the stack, plus links to public code on GitHub.'},
+    {id:'process',t:'How I approach a problem, with the real work behind each step.'},
+    {id:'experience',t:'Internships so far, newest first.'},
     {id:'toolkit',t:'Every tool as a floating network. Drag a node, or click a ring to see which tools fed it.'},
     {id:'education',t:'Where I studied, plus certificates.'},
     {id:'contact',t:'Say hello here. The form opens your email app with the message ready.'}
@@ -1785,33 +1889,28 @@ addEventListener('scroll',tlProgress,{passive:true});addEventListener('resize',t
   })();
 
   /* ambient: spotlight, cursor ring, scroll progress, ticker, reveals */
-  const cR=$('#cornerR'),cC=$('#cClock'),ring=$('#ring'),spot=$('#spot'),sprog=$('#sprog');
+  const cC=$('#cClock'),ring=$('#ring'),spot=$('#spot'),sprog=$('#sprog'),hdr=$('header');
   const clk=()=>{cC.textContent=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour12:false})+' IST'};clk();setInterval(clk,1000);
   const fine=matchMedia('(pointer: fine)').matches;
-  let px=innerWidth*.6,py=innerHeight*.35,rx=px,ry=py,sx=px,sy=py,lastMove=-9999,pct=0;
-  const corner=()=>{cR.textContent=`x ${Math.round(px)}, y ${Math.round(py)}   scroll ${pct}%`};
+  let px=innerWidth*.6,py=innerHeight*.35,rx=px,ry=py,sx=px,sy=py,araf=0;
   function scrolled(){
     const h=document.documentElement,max=h.scrollHeight-h.clientHeight,p=max>0?h.scrollTop/max:0;
-    document.querySelector('header').classList.toggle('scrolled',h.scrollTop>8);pct=Math.round(p*100);sprog.style.transform=`scaleX(${p})`;if(fine)corner();
+    hdr.classList.toggle('scrolled',h.scrollTop>8);sprog.style.transform=`scaleX(${p})`;
   }
   addEventListener('scroll',scrolled,{passive:true});scrolled();
-  addEventListener('pointermove',e=>{
-    px=e.clientX;py=e.clientY;lastMove=performance.now();
-    if(fine){corner();ring.style.opacity='1'}
-  },{passive:true});
+  /* the loop stops once the spotlight and ring have caught up with the cursor */
+  function amb(){
+    sx+=(px-sx)*.06;sy+=(py-sy)*.06;spot.style.transform=`translate(${sx.toFixed(1)}px,${sy.toFixed(1)}px)`;
+    if(fine){rx+=(px-rx)*.24;ry+=(py-ry)*.24;ring.style.transform=`translate(${(rx-14).toFixed(1)}px,${(ry-14).toFixed(1)}px)`}
+    araf=Math.abs(px-sx)+Math.abs(py-sy)>.6||(fine&&Math.abs(px-rx)+Math.abs(py-ry)>.3)?requestAnimationFrame(amb):0;
+  }
+  const wake=()=>{if(!araf)araf=requestAnimationFrame(amb)};
+  addEventListener('pointermove',e=>{px=e.clientX;py=e.clientY;if(fine)ring.style.opacity='1';wake()},{passive:true});
+  spot.style.transform=`translate(${sx}px,${sy}px)`;
   if(fine){
-    document.addEventListener('mouseover',e=>{ring.classList.toggle('big',!!e.target.closest('a,button,input,textarea,.slot,.chip,canvas,summary'))});
+    document.addEventListener('mouseover',e=>{ring.classList.toggle('big',!!e.target.closest('a,button,input,textarea,.slot,canvas,summary'))});
     document.documentElement.addEventListener('mouseleave',()=>{ring.style.opacity='0'});
   }
-  function amb(now){
-    let tx=px,ty=py;
-    if(!reduce&&now-lastMove>3500){tx=innerWidth*(.5+.32*Math.sin(now/5200));ty=innerHeight*(.45+.3*Math.sin(now/4100+1))}
-    sx+=(tx-sx)*.05;sy+=(ty-sy)*.05;
-    spot.style.transform=`translate(${sx}px,${sy}px)`;
-    if(fine){rx+=(px-rx)*.24;ry+=(py-ry)*.24;ring.style.transform=`translate(${rx-14}px,${ry-14}px)`}
-    requestAnimationFrame(amb);
-  }
-  requestAnimationFrame(amb);
 
   const tk=$('#tickerIn'),TERMS=['Python','TensorFlow','Deep Learning','Agentic RAG','FAISS','Ollama','Computer Vision','Pandas','SQL','Grad-CAM','Streamlit','Generative AI','Transfer Learning','K-Means','NumPy','Prompt Engineering','AI-Native Apps','Odoo CRM'];
   const row=TERMS.map((t,i)=>`<span style="--c:var(--c${i%6+1})">${t}</span>`).join('');
